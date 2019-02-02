@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="156.0" maxWidth="208.0" minHeight="156.0" minWidth="208.0" prefHeight="156.0" prefWidth="208.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.About">
+   <children>
+      <ImageView fitHeight="156.0" fitWidth="208.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@media/About%20background.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="25.0" layoutY="3.0" text="about" textFill="#bbbbbb">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+      </Label>
+      <Button fx:id="closeBtn" layoutX="178.0" maxHeight="21.0" maxWidth="30.0" minHeight="21.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#closeClicked" prefHeight="21.0" prefWidth="30.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="22.0" maxHeight="134.0" maxWidth="208.0" minHeight="134.0" minWidth="208.0" prefHeight="134.0" prefWidth="208.0" text="alejotorres@live.com.ar&#10;" textAlignment="CENTER" textFill="#bbbbbb">
+         <font>
+            <Font name="Segoe UI" size="14.0" />
+         </font>
+      </Label>
+      <ImageView disable="true" fitHeight="10.0" fitWidth="10.0" layoutX="188.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@media/Close.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

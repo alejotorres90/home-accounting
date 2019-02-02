@@ -1,0 +1,197 @@
+//Prompt texts
+* {
+    -fx-prompt-text-fill: gray;
+}
+
+
+//Buttons
+.button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.button:hover {
+    -fx-background-color: #313335;
+}
+
+
+//Scroll pane (showScroll)
+.scroll-pane > .viewport {
+   -fx-background-color: #313335;
+}
+
+.scroll-pane {
+   -fx-background-color: #313335;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color:transparent;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #2E2E2F;
+    -fx-background-radius: 0;
+}
+
+.scroll-bar:vertical .increment-arrow, .decrement-arrow {
+    -fx-background-color: #BBBBBB;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:vertical .increment-button, .decrement-button {
+    -fx-background-color: transparent;
+}
+
+
+//Check box
+.check-box .box {
+    -fx-background-color: #313335;
+    -fx-border-color: #BBBBBB;
+    -fx-border-radius:0px;
+    -fx-border-width:0.1;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #BBBBBB;
+}
+
+.check-box {
+    -fx-font-size: 14;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #313335;
+    -fx-border-radius:0px;
+}
+
+
+//Date picker
+.date-picker .text-field {
+    -fx-background-color: #313335;
+    -fx-background-radius: 0;
+    -fx-font-size: 14;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #BBBBBB;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: transparent;
+    -fx-color: transparent;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: #BBBBBB;
+}
+
+
+//Spinner
+.spinner .text-field {
+    -fx-background-color: #313335;
+    -fx-background-radius: 0;
+    -fx-font-size: 14;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #BBBBBB;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+}
+
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-background-color: BBBBBB;
+}
+
+
+//Combo box
+.combo-box .text-field{
+    -fx-background-color: transparent;
+    -fx-font-size: 14;
+    -fx-text-fill: #BBBBBB;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #BBBBBB;
+
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: transparent;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: transparent;
+    -fx-pref-height: 56;
+    -fx-border-color: #BBBBBB;
+    -fx-border-radius:0px;
+    -fx-border-width:0.03;
+}
+
+.combo-box-popup .list-view .list-cell{
+    -fx-background-color: transparent;
+    -fx-font-size: 14;
+    -fx-font-family: "Segoe UI";
+    -fx-text-fill: #BBBBBB;
+}
+
+
+//Particular IDs
+#nonHoverButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #BBBBBB;
+}
+
+#nonHoverButton:hover {
+    -fx-text-fill: #d6d6d6;
+}
+
+#tooltip {
+    -fx-background-color: #313335;
+    -fx-background-radius: 0;
+    -fx-text-fill: #BBBBBB;
+}
+
+#clickedButton {
+    -fx-background-color: #2E2E2F;
+    -fx-background-radius: 0;
+}
+
+#listPane:hover {
+    -fx-background-color: #2E2E2F;
+}
+
+#selectedPane {
+    -fx-background-color: #2E2E2F;
+}
+
+#editButton {
+    -fx-background-color: transparent;
+    -fx-graphic: url("../media/Edit.png");
+}
+
+#deleteButton {
+    -fx-background-color: transparent;
+    -fx-graphic: url("../media/Delete.png");
+}
+
+#infoButton {
+    -fx-background-color: transparent;
+    -fx-graphic: url("../media/Info.png");
+}
+
+#editButton:hover {
+    -fx-graphic: url("../media/EditHover.png");
+}
+
+#deleteButton:hover {
+    -fx-graphic: url("../media/DeleteHover.png");
+}
+
+#infoButton:hover {
+    -fx-graphic: url("../media/InfoHover.png");
+}
+
+#confirmDeleteButton {
+    -fx-border-color: #313335;
+}

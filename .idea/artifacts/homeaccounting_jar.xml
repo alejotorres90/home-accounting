@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="homeaccounting:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/homeaccounting_jar</output-path>
+    <root id="archive" name="homeaccounting.jar">
+      <element id="module-output" name="home-accounting" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../ConnectorJ8.0.13.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

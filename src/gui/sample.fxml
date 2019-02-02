@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" minHeight="600.0" minWidth="800.0" prefHeight="600.0" prefWidth="800.0" stylesheets="@css/styles.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Controller">
+   <children>
+      <ImageView disable="true" fitHeight="600.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@media/Main%20background.png" />
+         </image>
+      </ImageView>
+      <AnchorPane maxHeight="22.0" maxWidth="710.0" minHeight="22.0" minWidth="710.0" onMouseDragged="#draggableDragged" onMousePressed="#draggablePressed" prefHeight="22.0" prefWidth="710.0" />
+      <Label layoutX="25.0" layoutY="2.0" text="home accounting" textFill="#bbbbbb" />
+      <Button fx:id="minimizeBtn" layoutX="740.0" maxHeight="22.0" maxWidth="30.0" minHeight="22.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#minimizedClicked" prefHeight="22.0" prefWidth="30.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="closeBtn" layoutX="770.0" maxHeight="22.0" maxWidth="30.0" minHeight="22.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#closeClicked" prefHeight="22.0" prefWidth="30.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="aboutBtn" layoutX="710.0" maxHeight="22.0" maxWidth="30.0" minHeight="22.0" minWidth="30.0" mnemonicParsing="false" onMouseClicked="#aboutClicked" prefHeight="22.0" prefWidth="30.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="userName" alignment="CENTER" contentDisplay="CENTER" layoutX="30.0" layoutY="574.0" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" textAlignment="CENTER" textFill="#bbbbbb">
+         <font>
+            <Font name="Segoe UI" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Button fx:id="nonHoverButton" layoutX="30.0" layoutY="464.0" mnemonicParsing="false" onMouseClicked="#changeUserClicked" prefHeight="125.0" prefWidth="100.0">
+         <tooltip>
+            <Tooltip fx:id="tooltip" text="Change user">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fx:id="userImg" disable="true" fitHeight="100.0" fitWidth="100.0" layoutX="30.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ImageView>
+      <ImageView disable="true" fitHeight="10.0" fitWidth="10.0" layoutX="720.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@media/About.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="10.0" fitWidth="10.0" layoutX="750.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@media/Minimize.png" />
+         </image>
+      </ImageView>
+      <ImageView disable="true" fitHeight="10.0" fitWidth="10.0" layoutX="780.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@media/Close.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="debtsPane" layoutX="160.0" layoutY="22.0" maxHeight="578.0" maxWidth="640.0" minHeight="578.0" minWidth="640.0" prefHeight="578.0" prefWidth="640.0" visible="false">
+         <children>
+            <Label fx:id="debtsLbl" alignment="CENTER" contentDisplay="CENTER" maxHeight="578.0" maxWidth="640.0" minHeight="578.0" minWidth="640.0" prefHeight="578.0" prefWidth="640.0" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI" size="16.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="listPane" layoutX="160.0" layoutY="22.0" maxHeight="578.0" maxWidth="640.0" minHeight="578.0" minWidth="640.0" prefHeight="578.0" prefWidth="640.0" visible="false">
+         <children>
+            <Button alignment="CENTER" layoutX="285.0" layoutY="533.0" maxHeight="30.0" maxWidth="70.0" minHeight="30.0" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#newBtnClicked" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: #313335;" text="NEW" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ScrollPane layoutX="15.0" layoutY="15.0" maxHeight="503.0" maxWidth="610.0" minHeight="503.0" minWidth="610.0" prefHeight="503.0" prefWidth="610.0">
+               <content>
+                  <AnchorPane fx:id="listScrollPane" maxHeight="501.0" maxWidth="595.0" minHeight="501.0" minWidth="595.0" prefHeight="501.0" prefWidth="595.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="editPaymentsPane" layoutX="175.0" layoutY="37.0" maxHeight="503.0" maxWidth="610.0" minHeight="503.0" minWidth="610.0" prefHeight="503.0" prefWidth="610.0" style="-fx-background-color: #313335;" visible="false">
+         <children>
+            <DatePicker fx:id="datePaymentDate" editable="false" focusTraversable="false" layoutX="412.0" layoutY="199.0" maxHeight="32.0" maxWidth="183.0" minHeight="32.0" minWidth="183.0" prefHeight="32.0" prefWidth="183.0" promptText="Date" style="-fx-background-color: transparent; -fx-border-color: BBBBBB; -fx-border-width: 0.03;" />
+            <Label fx:id="alertPaymentLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="441.0" maxHeight="47.0" maxWidth="580.0" minHeight="47.0" minWidth="580.0" prefHeight="47.0" prefWidth="580.0" style="-fx-background-color: #2E2E2F;" text="Please complete all the fields before saving the payment" textFill="#bbbbbb" visible="false">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="335.0" layoutY="518.0" maxHeight="30.0" maxWidth="70.0" minHeight="30.0" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#cancelPaymentBtnClicked" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: #313335;" text="CANCEL" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="205.0" layoutY="518.0" maxHeight="30.0" maxWidth="70.0" minHeight="30.0" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#savePaymentBtnClicked" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: #313335;" text="SAVE" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="amountPaymentField" focusTraversable="false" layoutX="213.0" layoutY="199.0" prefHeight="32.0" prefWidth="183.0" promptText="Amount" style="-fx-background-color: transparent; -fx-border-color: BBBBBB; -fx-border-width: 0.03; -fx-text-fill: #BBBBBB;">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </TextField>
+            <ComboBox fx:id="creditorPaymentCombo" editable="true" focusTraversable="false" layoutX="15.0" layoutY="199.0" prefHeight="32.0" prefWidth="183.0" promptText="Creditor" style="-fx-background-color: transparent; -fx-border-color: BBBBBB; -fx-border-width: 0.03;" stylesheets="@css/styles.css" visibleRowCount="0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="editExpensesPane" layoutX="175.0" layoutY="37.0" maxHeight="503.0" maxWidth="610.0" minHeight="503.0" minWidth="610.0" prefHeight="503.0" prefWidth="610.0" style="-fx-background-color: #313335;" visible="false">
+         <children>
+            <TextField fx:id="descriptionExpenseField" focusTraversable="false" layoutX="15.0" layoutY="163.0" maxHeight="28.0" maxWidth="110.0" minHeight="28.0" minWidth="580.0" prefHeight="28.0" prefWidth="110.0" promptText="Description" style="-fx-background-color: transparent; -fx-border-color: BBBBBB; -fx-border-width: 0.03; -fx-text-fill: #BBBBBB;">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font></TextField>
+            <TextField fx:id="priceExpenseField" focusTraversable="false" layoutX="15.0" layoutY="249.0" maxHeight="28.0" maxWidth="183.0" minHeight="28.0" minWidth="183.0" prefHeight="28.0" prefWidth="183.0" promptText="Price" style="-fx-background-color: transparent; -fx-border-color: BBBBBB; -fx-border-width: 0.03; -fx-text-fill: #BBBBBB;">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font></TextField>
+            <Label layoutX="15.0" layoutY="206.0" prefHeight="35.0" prefWidth="580.0" text="  Participants:" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI" size="14.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="participantsExpenseSpinner" focusTraversable="false" layoutX="213.0" layoutY="206.0" maxHeight="28.0" maxWidth="183.0" minHeight="28.0" minWidth="183.0" prefHeight="28.0" prefWidth="183.0" style="-fx-background-color: transparent; -fx-border-color: BBBBBB; -fx-border-width: 0.03;" />
+            <CheckBox fx:id="firstExpenseCheck" focusTraversable="false" layoutX="412.0" layoutY="206.0" maxHeight="28.0" maxWidth="65.0" minHeight="28.0" minWidth="65.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="65.0" text="Alejo" textFill="#bbbbbb" />
+            <CheckBox fx:id="secondExpenseCheck" focusTraversable="false" layoutX="504.0" layoutY="206.0" maxHeight="28.0" maxWidth="65.0" minHeight="28.0" minWidth="65.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="65.0" text="Alejo" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font></CheckBox>
+            <Button layoutX="355.0" layoutY="518.0" maxHeight="30.0" maxWidth="70.0" minHeight="30.0" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#cancelExpenseBtnClicked" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: #313335;" text="CANCEL" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="saveExpenseBtn" layoutX="215.0" layoutY="518.0" maxHeight="30.0" maxWidth="70.0" minHeight="30.0" minWidth="70.0" mnemonicParsing="false" onMouseClicked="#saveExpenseBtnClicked" prefHeight="30.0" prefWidth="70.0" style="-fx-border-color: #313335;" text="SAVE" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI Black" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="alertExpenseLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="441.0" maxHeight="47.0" maxWidth="580.0" minHeight="47.0" minWidth="580.0" prefHeight="47.0" prefWidth="580.0" style="-fx-background-color: #2E2E2F;" text="Please complete all the fields before saving the payment" textFill="#bbbbbb" visible="false">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateExpenseDate" editable="false" focusTraversable="false" layoutX="213.0" layoutY="249.0" maxHeight="28.0" maxWidth="184.0" minHeight="28.0" minWidth="184.0" prefHeight="28.0" prefWidth="184.0" promptText="Date" style="-fx-background-color: transparent; -fx-border-color: BBBBBB; -fx-border-width: 0.03;" />
+         </children></AnchorPane>
+      <Button fx:id="debtsBtn" alignment="CENTER_LEFT" disable="true" layoutY="23.0" maxHeight="44.0" maxWidth="160.0" minHeight="44.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#debtsClicked" prefHeight="44.0" prefWidth="160.0" text=" DEBTS" textFill="#bbbbbb">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="paymentsBtn" alignment="CENTER_LEFT" disable="true" layoutY="65.0" maxHeight="45.0" maxWidth="160.0" minHeight="45.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#paymentsClicked" prefHeight="45.0" prefWidth="160.0" text=" PAYMENTS" textFill="#bbbbbb">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="expensesBtn" alignment="CENTER_LEFT" disable="true" layoutY="109.0" maxHeight="45.0" maxWidth="160.0" minHeight="45.0" minWidth="160.0" mnemonicParsing="false" onMouseClicked="#expensesClicked" prefHeight="45.0" prefWidth="160.0" text=" EXPENSES" textFill="#bbbbbb">
+         <font>
+            <Font name="Segoe UI Black" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <AnchorPane fx:id="selectUserPane" layoutX="30.0" layoutY="420.0" maxHeight="170.0" maxWidth="100.0" minHeight="150.0" minWidth="100.0" prefHeight="170.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="nonHoverButton" alignment="CENTER_RIGHT" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#alejoBtn" prefHeight="50.0" prefWidth="100.0" text="Alejo" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nonHoverButton" alignment="CENTER_RIGHT" layoutY="60.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#ianBtn" prefHeight="50.0" prefWidth="100.0" text="Ian" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nonHoverButton" alignment="CENTER_RIGHT" layoutY="120.0" maxHeight="50.0" maxWidth="100.0" minHeight="50.0" minWidth="100.0" mnemonicParsing="false" onMouseClicked="#totiBtn" prefHeight="50.0" prefWidth="100.0" text="Toti" textFill="#bbbbbb">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView disable="true" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@media/AlejoSmall.png" />
+               </image>
+            </ImageView>
+            <ImageView disable="true" fitHeight="50.0" fitWidth="50.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@media/IanSmall.png" />
+               </image>
+            </ImageView>
+            <ImageView disable="true" fitHeight="50.0" fitWidth="50.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@media/TotiSmall.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Label fx:id="selectUserLbl" alignment="CENTER" contentDisplay="CENTER" layoutX="160.0" layoutY="22.0" maxHeight="578.0" maxWidth="640.0" minHeight="578.0" minWidth="640.0" prefHeight="578.0" prefWidth="640.0" text="Please select user" textFill="#bbbbbb">
+         <font>
+            <Font name="Segoe UI" size="16.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="loadingAnchor" layoutY="22.0" prefHeight="578.0" prefWidth="800.0" style="-fx-background-color: rgba(49, 51, 53, 0.5);" visible="false">
+         <children>
+            <WebView fx:id="loadingView" layoutX="352.0" layoutY="161.0" prefHeight="256.0" prefWidth="256.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
