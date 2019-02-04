@@ -1,8 +1,10 @@
 ## Home accounting
 CRUD to keep track of home expenses with my roommates
 
+
 ### DB
 MySQL hosted on GearHost
+
 
 ### GUI
 Developed with JavaFX using CSS
